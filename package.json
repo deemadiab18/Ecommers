@@ -6,6 +6,7 @@
     "dev": "next dev --turbopack",
     "dev:reset": "node scripts/clean-next.mjs && next dev --turbopack",
     "build": "next build",
+    "build:pages": "next build",
     "start": "next start",
     "probe": "node scripts/probe-api.mjs"
   },

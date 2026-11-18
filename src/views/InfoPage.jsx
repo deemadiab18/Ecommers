@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Container from "../components/layout/Container";
 import CatalogPageHeader from "../components/catalog/CatalogPageHeader";
 import Card from "../components/ui/Card";
@@ -10,7 +10,7 @@ import { SITE_PAGES } from "../constants/content";
 import { STORE } from "../constants/store";
 
 export default function InfoPage() {
-  const { pathname } = useLocation();
+  const pathname = usePathname();
   const page = SITE_PAGES[pathname];
 
   if (!page) {

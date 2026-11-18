@@ -1,6 +1,7 @@
 node_modules
 dist
 .next
+out
 .env
 scripts/probe-results.json
 *.local
