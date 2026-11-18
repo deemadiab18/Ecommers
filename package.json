@@ -1,0 +1,31 @@
+{
+  "name": "freshcart",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "dev:reset": "node scripts/clean-next.mjs && next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "probe": "node scripts/probe-api.mjs"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
+    "@tanstack/react-query": "^5.62.11",
+    "axios": "^1.7.9",
+    "jwt-decode": "^4.0.0",
+    "lucide-react": "^0.468.0",
+    "next": "^15.1.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.54.2",
+    "react-hot-toast": "^2.4.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.5",
+    "@tailwindcss/turbopack": "^4.3.5",
+    "postcss": "^8.5.33",
+    "tailwindcss": "^4.3.5"
+  }
+}

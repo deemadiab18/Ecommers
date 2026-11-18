@@ -1,0 +1,7 @@
+import { cn } from "../../utils/cn";
+
+export default function Container({ children, className, as: Component = "div" }) {
+  return (
+    <Component className={cn("mx-auto w-full max-w-7xl px-4 sm:px-6", className)}>{children}</Component>
+  );
+}

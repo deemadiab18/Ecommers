@@ -1,0 +1,10 @@
+node_modules
+dist
+.next
+.env
+scripts/probe-results.json
+*.local
+
+# Keep local only (not pushed)
+PROMPT.md
+progress.md
