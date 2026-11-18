@@ -23,8 +23,8 @@ function sessionFromPayload(payload) {
 
 export function AuthProvider({ children }) {
   const router = useRouter();
-  const [user, setUser] = useState(() => readUser());
-  const [status, setStatus] = useState(() => (readToken() ? "loading" : "guest"));
+  const [user, setUser] = useState(null);
+  const [status, setStatus] = useState("guest");
 
   function setSession(payload) {
     const nextUser = sessionFromPayload(payload);
@@ -61,6 +61,8 @@ export function AuthProvider({ children }) {
       setStatus("guest");
       return;
     }
+    setUser(readUser());
+    setStatus("loading");
     let cancelled = false;
     verifyToken()
       .then((data) => {
